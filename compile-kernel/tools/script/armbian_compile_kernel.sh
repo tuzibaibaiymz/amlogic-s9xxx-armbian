@@ -1008,8 +1008,8 @@ if [[ ! -f /boot/initrd.img-KERNEL_NAME || ! -f /boot/uInitrd-KERNEL_NAME ]]; th
 fi
 
 # Handle uInitrd based on platform and model
-if [[ "${MODEL_ID}" =~ ^(r304|r306)$ ]]; then
-    # Special handling for MODEL_ID r304 and r306
+if [[ "${MODEL_ID}" =~ ^(r306|r307)$ ]]; then
+    # Special handling for MODEL_ID r306 and r307
     [[ -f initrd.img-KERNEL_NAME ]] && {
         [[ -f uInitrd ]] && rm -f uInitrd
         ln -sf initrd.img-KERNEL_NAME uInitrd
